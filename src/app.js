@@ -1,28 +1,34 @@
 console.log("busy running");
 
 //JSX - Javascript XML
+var app = {
+  title: "Sumologic",
+  subtitle: "This is a description about Sumologic"
+}
+
 var template =(
 <div>
-  <h1>Sumologic</h1>
-  <p>This is some info</p>
-  <ol>
-  	<li>Item one</li>
-  	<li>Item two</li>
-  </ol>
+  <h1>{app.title}</h1>
+  <p>{app.subtitle}</p>
 </div>
 );
 
 //Create a templateTwo var JSX expression
+var user = {
+  name:"Le Corbusier",
+  age:30,
+  location: "Mars"
+}
 
 const templateTwo = (
   <div>
-  	<h1>Sumologic</h1>
-  	<p>Age: 26</p>
-  	<p>Location: Ridgefield Park</p>
+  	<h1>{user.name}</h1>
+  	<p>Age: {user.age}</p>
+  	<p>Location: {user.location}</p>
   </div>		
 );
 
 var appRoot = document.getElementById("app");
 
-ReactDOM.render(templateTwo, appRoot);
+ReactDOM.render(template, appRoot);
 

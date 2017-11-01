@@ -3,36 +3,32 @@
 console.log("busy running");
 
 //JSX - Javascript XML
+var app = {
+  title: "Sumologic",
+  subtitle: "This is a description about Sumologic"
+};
+
 var template = React.createElement(
   "div",
   null,
   React.createElement(
     "h1",
     null,
-    "Sumologic"
+    app.title
   ),
   React.createElement(
     "p",
     null,
-    "This is some info"
-  ),
-  React.createElement(
-    "ol",
-    null,
-    React.createElement(
-      "li",
-      null,
-      "Item one"
-    ),
-    React.createElement(
-      "li",
-      null,
-      "Item two"
-    )
+    app.subtitle
   )
 );
 
 //Create a templateTwo var JSX expression
+var user = {
+  name: "Le Corbusier",
+  age: 30,
+  location: "Mars"
+};
 
 var templateTwo = React.createElement(
   "div",
@@ -40,20 +36,22 @@ var templateTwo = React.createElement(
   React.createElement(
     "h1",
     null,
-    "Sumologic"
+    user.name
   ),
   React.createElement(
     "p",
     null,
-    "Age: 26"
+    "Age: ",
+    user.age
   ),
   React.createElement(
     "p",
     null,
-    "Location: Ridgefield Park"
+    "Location: ",
+    user.location
   )
 );
 
 var appRoot = document.getElementById("app");
 
-ReactDOM.render(templateTwo, appRoot);
+ReactDOM.render(template, appRoot);
